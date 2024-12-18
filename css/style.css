@@ -1,0 +1,488 @@
+/* Initial Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #EFEFEF;
+    overflow-x: hidden;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Initial Styles End */
+
+/* Reusable Styles */
+.underline-hover {
+    text-align: center;
+}
+
+.underline-hover::after {
+    content: "";
+    background-color: #0097A7;
+    width: 0;
+    height: 3px;
+    border-radius: 999px;
+    margin-top: 1px;
+    display: block;
+    transition: all 300ms ease-in-out;
+    margin: auto;
+
+}
+
+.underline-hover:hover::after {
+    width: 100%;
+}
+
+.bold-hover {
+    transition: text-shadow 300ms ease-in-out;
+}
+
+.bold-hover:hover {
+    text-shadow: 0 -1px 0 currentColor;
+}
+
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: bold;
+    transition: all 300ms;
+
+}
+
+.btn:hover {
+    transform: scale(0.95);
+
+}
+
+.btn-primary {
+    background-color: #0097A7;
+    color: white;
+
+}
+
+.btn-primary:hover {
+    background-color: #00B3C7;
+}
+
+.btn-secondary {
+    border: 2px solid #0097A7;
+    color: #0097A7;
+}
+
+.btn-secondary:hover {
+    border: 2px solid #00B3C7;
+    color: #00B3C7;
+}
+
+.container {
+    padding: 0 124px;
+}
+
+.view {
+    height: 100vh;
+    width: 100vw;
+    padding-top: 64px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-primary {
+    color: #0097A7;
+    font-weight: bold;
+    margin-bottom: 32px;
+    font-size: 2.5rem;
+    margin-top: 32px;
+}
+
+.title-primary:hover:after {
+    width: 50%;
+}
+
+.highlighted {
+    color: #0097A7;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.center {
+    text-align: center;
+}
+
+
+
+.description-primary {
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+}
+
+.side-image {
+    border-radius: 24px;
+    width: 40%;
+    box-shadow: 0 8px 8px #00000060;
+    transition: all 300ms ease-in-out;
+}
+
+.side-image:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 16px #00000060;
+}
+
+.card {
+    max-width: 400px;
+    border-radius: 24px;
+    background-color: #EFEFEF;
+    text-align: center;
+    box-shadow: 0 0 16px #00000024;
+    border: 2px solid #EFEFEF;
+    transition: all 300ms ease-in-out;
+    overflow: hidden;
+}
+
+.card:hover {
+    border: 2px solid #0097A7;
+    background-color: #F6F6F6;
+}
+
+.card-content {
+    padding: 48px 28px;
+
+}
+
+.card-image-content {
+    padding: 24px 16px;
+}
+
+.card-image {
+    width: 400px;
+    height: 200px;
+    transition: all 600ms;
+}
+
+.card:hover .card-image {
+    transform: scale(1.05);
+    transform-origin: bottom;
+}
+
+.card-icon {
+    font-size: 86px;
+    color: #0097A7;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 24px;
+    font-size: 1.2rem;
+}
+
+.card-body {
+    color: #4F4F4F;
+    margin-bottom: 24px;
+}
+
+.glass-bar {
+    color: white;
+    text-align: center;
+}
+
+.glass-bar .glass-bar-background {
+    background-color: #006772;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    padding: 150px 124px;
+}
+
+.primary {
+    color: #0097A7;
+    font-weight: bold;
+}
+
+.input-field{
+    display: inline-block;
+    border: 2px solid #0097A7;
+    background-color: #EFEFEF;
+    border-radius: 8px;
+    padding: 8px 12px;
+    display: inline-flex;
+}
+.input-field input{
+    border: none;
+    background-color: transparent;
+}
+.input-field input:focus{
+    border: none;
+    outline: none;
+}
+.input-field .input-icon{
+    color: #0097A7;
+}
+
+/* Reusable Styles End */
+
+/* Header */
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 0 124px;
+    height: 64px;
+    background-color: #EFEFEF88;
+    backdrop-filter: blur(1em);
+    z-index: 1;
+}
+
+.logo {
+    gap: 8px;
+    height: 64px;
+    color: #0097A7;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 48px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 24px;
+}
+
+/* Header End */
+
+/* Landing Page Start */
+#landing {
+    position: relative;
+}
+
+#landing h2 {
+    margin-top: -86px;
+}
+
+.landing-buttons {
+    display: flex;
+    gap: 24px;
+    transform: scale(1.2);
+    transform-origin: left;
+}
+
+.scroll-down-icon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+}
+
+.scroll-icon {
+    display: block;
+    height: auto;
+    width: 24px;
+    fill: #0097A7;
+}
+
+.scroll-down-arrow {
+    animation: scroll-down-arrow-animation 0.8s ease-in-out 0s infinite alternate;
+}
+
+@keyframes scroll-down-arrow-animation {
+    0% {
+        transform: translateY(0px)
+    }
+
+    100% {
+        transform: translateY(10px)
+    }
+}
+
+/* Landing Page End */
+
+/* Why Us Start */
+#why-us .container {
+    width: 50%;
+}
+
+#why-us .why-us-image {
+    width: 50%;
+    height: 100%;
+    background-image: url(../images/why-us.webp);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #0067729f;
+}
+
+#why-us .title-primary {
+    color: #1D1D1D;
+    text-align: start;
+    margin-top: 0;
+    font-size: 1.8rem;
+    margin-bottom: 64px;
+}
+
+#why-us .description-primary {
+    color: #4F4F4F;
+
+}
+
+#why-us i {
+    font-size: 2rem;
+}
+
+#why-us span {
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-left: 8px;
+    transform: translateY(-0.3rem);
+}
+
+/* Why Us End */
+
+/* Pricing Start */
+#pricing .card-body{
+    margin-bottom: 0;
+}
+
+#pricing p {
+    margin-bottom: 24px;
+}
+
+
+#pricing .card p span {
+    font-weight: bold;
+    font-size: 2rem;
+    color: black;
+}
+#pricing ul{
+    text-align: start;
+    margin-bottom: 24px;
+}
+
+#pricing li span {
+    display: inline-block;
+    transform: translateY(-0.3rem);
+}
+
+#pricing .card i {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+#pricing .btn{
+    width: 75%;
+}
+#pricing .price-popular{
+ background-color: #0097A7;
+ color: #EFEFEF;
+ font-weight: bold;
+ text-align: center;
+ padding: 8px;   
+}
+
+/* Pricing End */
+
+/* Achievements Bar Start */
+.achievments .glass-bar-background {
+    background-image: url('../images/achievements-bar.webp');
+
+}
+
+.achievments i {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+.achievments span {
+    font-weight: bold;
+}
+
+/* Achievements Bar End */
+
+/* About Start */
+#about .container {
+    width: 50%;
+}
+
+#about .about-image {
+    width: 50%;
+    height: 100%;
+    background-image: url(../images/about.webp);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #0067729f;
+}
+
+#about .title-primary {
+    color: #1D1D1D;
+    text-align: start;
+    margin-top: 0;
+    font-size: 1.8rem;
+    margin-bottom: 64px;
+}
+
+
+#about .description-primary {
+    color: #4F4F4F;
+
+}
+
+/* About End */
+
+/* Newsletter Start */
+.newsletter{
+    background-color: #d3d3d3;
+    padding: 48px;
+}
+.newsletter-field{
+    display: inline-block;
+    margin: auto;
+}
+.newsletter-field input{
+    width: 20vw;
+}
+/* Newsletter End */
+
+/* Footer Start */
+.footer{
+    margin: 48px 0;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+.footer .logo{
+    display: inline-flex;
+}
+.footer .contacts{
+    margin-top: 16px;
+    font-size: 1.8rem;
+    gap: 2px;
+}
+
+.footer .links i{
+    font-size: 0.5rem;
+    margin-right: 0.5rem;
+}
+/* Footer End */
